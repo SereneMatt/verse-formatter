@@ -12,7 +12,7 @@
     document.getElementById('capitilise').addEventListener('click',  (event) => {
       const verseInput = document.getElementById('verse').value;
       if (verseInput) {
-        const formattedInput = verseInput.replace(/\s+/g, ' ').replace(/ \,/g, ',').replace(/ he/g, ' He').replace(' - ', ' — ').trim();
+        const formattedInput = verseInput.replace(/\s+/g, ' ').replace(/ \,/g, ',').replace(/ he/g, ' He').replaceAll(' - ', ' — ').trim();
         const outputDiv = document.getElementById('output');
         outputDiv.innerHTML = formattedInput;
       }
