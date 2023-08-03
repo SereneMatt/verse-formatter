@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>AV verse formatter</title>
+  <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
   <textarea id="verse" rows="25" cols="100"></textarea>
   <button id="capitilise" aria-label="capitilise">Format</button>
-  <div id="output"></div>
+  <div id="output" class="output"></div>
 
   <script>
     document.getElementById('capitilise').addEventListener('click',  (event) => {
