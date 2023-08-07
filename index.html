@@ -5,9 +5,11 @@
   <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-  <textarea id="verse" rows="25" cols="100"></textarea>
-  <button id="capitilise" aria-label="capitilise">Format</button>
-  <div id="output" class="output"></div>
+  <div class="container">
+    <textarea id="verse" rows="25" cols="100"></textarea>
+    <button id="capitilise" aria-label="capitilise" class="btn-format">Format</button>
+    <div id="output" class="output"></div>
+  </div>
 
   <script>
     document.getElementById('capitilise').addEventListener('click',  (event) => {
@@ -17,7 +19,6 @@
         const outputDiv = document.getElementById('output');
         outputDiv.innerHTML = formattedInput;
       }
-
     });
   </script>
 </body>
