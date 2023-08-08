@@ -8,8 +8,26 @@
   <div class="container">
     <textarea id="verse" rows="25" cols="100"></textarea>
     <button id="capitilise" aria-label="capitilise" class="btn-format">Format</button>
-    <div id="output" class="output"></div>
   </div>
+
+  <div id="output" class="output"></div>
+  <button class="btn" onclick="copyContent()">Copy!</button>
+
+  <script>
+    const copyContent = () => {
+      try {
+        // Get the text field
+        const copyText = document.getElementById("output").innerHTML;
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText);
+
+        console.log('Content copied to clipboard', copyText);
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+  </script>
 
   <script>
     document.getElementById('capitilise').addEventListener('click',  (event) => {
