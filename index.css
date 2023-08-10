@@ -11,6 +11,10 @@ body {
 
 .output {
   color: white;
+  border: 1px solid teal;
+  padding: 10px;
+  margin: 30px;
+  display: none;
 }
 
 .btn-format {
@@ -30,4 +34,8 @@ body {
   &:hover {
     background-color: rgb(41 37 37);
   }
+}
+
+#btn-copy {
+  display: none;
 }
